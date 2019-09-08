@@ -35,7 +35,8 @@
   export let hasError = false;
   export let containerStyles = '';
   export let getSelectionLabel = (option) => {
-    if (option) return option.label
+    if (typeof option === 'string') return option;
+    else if (option) return option.label
   };
 
   export let createGroupHeaderItem = (groupValue) => {
@@ -65,7 +66,7 @@
   export let hideEmptyState = false;
   export let filteredItems = [];
   export let inputAttributes = {};
-  
+
 
   let target;
   let activeSelectedValue;
@@ -85,9 +86,9 @@
 
   const getItems = debounce(async () => {
     isWaiting = true;
-    
+
     items = await loadOptions(filterText);
-  
+
     isWaiting = false;
     isFocused = true;
     listOpen = true;
@@ -164,16 +165,16 @@
 
           if(groupValue) {
             groups[groupValue].push(Object.assign(
-              createGroupHeaderItem(groupValue, item), 
-              { 
-                id: groupValue, 
-                isGroupHeader: true, 
+              createGroupHeaderItem(groupValue, item),
+              {
+                id: groupValue,
+                isGroupHeader: true,
                 isSelectable: isGroupHeaderSelectable
               }
             ));
           }
         }
-        
+
         groups[groupValue].push(Object.assign({ isGroupItem: !!groupValue }, item));
       });
 
@@ -296,7 +297,8 @@
       const uniqueValues = [];
 
       selectedValue.forEach(val => {
-        if (!ids.includes(val[optionIdentifier])) {
+        const id = typeof val === 'string' ? val : val[optionIdentifier];
+        if (!ids.includes(id)) {
           ids.push(val[optionIdentifier]);
           uniqueValues.push(val);
         } else {
@@ -328,7 +330,7 @@
     }
 
     dispatch('clear', itemToRemove);
-    
+
     getPosition();
   }
 
@@ -534,22 +536,6 @@
     if (items && items.length > 0) {
       originalItemsClone = JSON.stringify(items);
     }
-
-    if (selectedValue) {
-      if (isMulti) {
-        selectedValue = selectedValue.map(item => {
-          if (typeof item === 'string') {
-            return { value: item, label: item }
-          } else {
-            return item;
-          }
-        })
-      } else {
-        if (typeof selectedValue === 'string') {
-          selectedValue = { value: selectedValue, label: selectedValue }
-        }
-      }
-    }
   });
 
   onDestroy(() => {
@@ -578,7 +564,7 @@
     {..._inputAttributes}
     bind:this={input}
     on:focus="{handleFocus}"
-    bind:value="{filterText}"    
+    bind:value="{filterText}"
     placeholder="{placeholderText}"
     disabled="{isDisabled}"
     style="{inputStyles}"
