@@ -37,6 +37,7 @@
 
   .groupItem {
     padding-left: var(--groupItemPaddingLeft, 40px);
+    font-size: var(--groupItemFontSize, 12px);
   }
 
   .item:active {
