@@ -78,6 +78,7 @@ You can override the following variables to style a Select component.
 - `--padding`
 - `--placeholderColor`
 - `--selectedItemPadding`
+- `--selectedItemFontSize`
 - `--spinnerColor`
 - `--spinnerHeight`
 - `--spinnerLeft`
