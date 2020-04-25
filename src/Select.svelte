@@ -675,7 +675,8 @@
     height: var(--height, 42px);
     overflow-x: hidden;
     padding: var(--selectedItemPadding, 0 20px 0 0);
-    font-size: var(--selectedItemFontSize, 12px)
+    font-size: var(--selectedItemFontSize, 12px);
+    font-weight: var(--selectedItemFontweight, 600);
   }
 
   .selectedItem:focus {
