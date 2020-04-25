@@ -848,7 +848,9 @@
 
   {#if showChevron && !selectedValue || (!isSearchable && !isDisabled && !isWaiting && ((showSelectedItem && !isClearable) || !showSelectedItem))}
     <div class="indicator">
-      <svg
+      <svg        
+        x="0px"
+        y="0px"
         width="100%"
         height="100%"
         viewBox="0 0 20 20"
