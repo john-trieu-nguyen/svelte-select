@@ -283,7 +283,7 @@
     cursor: default;
     font-size: 1em;
     font-size: var(--groupTitleFontSize, 12px);
-    font-weight: 500;
+    font-weight: 600;
     font-weight: var(--groupTitleFontWeight, 600);
     height: 32px;
     height: var(--height, 42px);
