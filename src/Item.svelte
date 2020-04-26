@@ -41,7 +41,7 @@
   }
 
   .groupItem {
-    padding-left: 40px;
+    padding-left: 20px;
     padding-left: var(--groupItemPaddingLeft, 40px);
     font-size: 12px;
     font-size: var(--groupItemFontSize, 12px);
