@@ -22,9 +22,13 @@
 <style>
   .item {
     cursor: default;
+    height: 32px;
     height: var(--height, 42px);
+    line-height: 32px;
     line-height: var(--height, 42px);
+    padding: 0 20px;
     padding: var(--itemPadding, 0 20px);
+    color: #000000;
     color: var(--itemColor, #000000);
     text-overflow: ellipsis;
     overflow: hidden;
@@ -32,28 +36,36 @@
   }
 
   .groupHeader {
+    text-transform: uppercase;
     text-transform: var(--groupTitleTextTransform, uppercase);
   }
 
   .groupItem {
+    padding-left: 40px;
     padding-left: var(--groupItemPaddingLeft, 40px);
+    font-size: 12px;
     font-size: var(--groupItemFontSize, 12px);
   }
 
   .item:active {
+    background: #b9daff;
     background: var(--itemActiveBackground, #b9daff);
   }
 
   .item.active {
+    background:#007aff;
     background: var(--itemIsActiveBG, #007aff);
+    color: #fff;
     color: var(--itemIsActiveColor, #fff);
   }
 
   .item.first {
+    border-radius: 4px 4px 0 0;
     border-radius: var(--itemFirstBorderRadius, 4px 4px 0 0);
   }
 
   .item.hover:not(.active) {
+    background: #e7f2ff;
     background: var(--itemHoverBG, #e7f2ff);
   }
 </style>

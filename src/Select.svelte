@@ -619,12 +619,16 @@
   .selectContainer {
     --padding: 0 16px;
     
+    border: 1px solid #d8dbdf;
     border: var(--border, 1px solid #d8dbdf);
+    border-radius: 25px;
     border-radius: var(--borderRadius, 3px);
+    height: 32px;
     height: var(--height, 42px);
     position: relative;
     display: flex;
     align-items: center;
+    padding: 0 16px;
     padding: var(--padding);
     background: #fff;
     background: var(--background, #fff);
@@ -633,19 +637,27 @@
   .selectContainer input {
     cursor: default;
     border: none;
+    color: #3f4f5f;
     color: var(--inputColor, #3f4f5f);
+    height: 32px;
     height: var(--height, 42px);
+    line-height: 42px;
     line-height: var(--height, 42px);
+    padding: 0 16px;
     padding: var(--inputPadding, var(--padding));
     width: 100%;
     background: transparent;
+    font-size: 14px;  
     font-size: var(--inputFontSize, 14px);
+    letter-spacing: -0.08px;
     letter-spacing: var(--inputLetterSpacing, -0.08px);
     position: absolute;
+    left: 0;
     left: var(--inputLeft, 0);
   }
 
   .selectContainer input::placeholder {
+    color:#78848f;
     color: var(--placeholderColor, #78848f);
   }
 
@@ -654,10 +666,12 @@
   }
 
   .selectContainer:hover {
+    border-color:#b2b8bf;
     border-color: var(--borderHoverColor, #b2b8bf);
   }
 
   .selectContainer.focused {
+    border-color: #006fe8;
     border-color: var(--borderFocusColor, #006fe8);
   }
 
@@ -672,11 +686,16 @@
   }
 
   .selectedItem {
+    line-height: 32px;
     line-height: var(--height, 42px);
+    height: 32px;
     height: var(--height, 42px);
     overflow-x: hidden;
+    padding: 0 20px 0 0;
     padding: var(--selectedItemPadding, 0 20px 0 0);
+    font-size: 12px;
     font-size: var(--selectedItemFontSize, 12px);
+    font-weight: 600;
     font-weight: var(--selectedItemFontweight, 600);
   }
 
@@ -704,10 +723,15 @@
 
   .indicator {
     position: absolute;
+    right: 10px;
     right: var(--indicatorRight, 10px);
+    top: 11px;
     top: var(--indicatorTop, 11px);
+    width: 20px;
     width: var(--indicatorWidth, 20px);
+    height: 20px;
     height: var(--indicatorHeight, 20px);
+    color: #c5cacf;
     color: var(--indicatorColor, #c5cacf);
   }
 
