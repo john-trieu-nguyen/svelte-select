@@ -261,10 +261,14 @@
 
 <style>
   .listContainer {
+    box-shadow: 0 2px 3px 0 rgba(44, 62, 80, 0.24);
     box-shadow: var(--listShadow, 0 2px 3px 0 rgba(44, 62, 80, 0.24));
+    border-radius: 4px;
     border-radius: var(--listBorderRadius, 4px);
+    max-height: 250px;
     max-height: var(--listMaxHeight, 250px);
     overflow-y: auto;
+    background: #fff;
     background: var(--listBackground, #fff);
   }
 
@@ -273,16 +277,24 @@
   }
 
   .listGroupTitle {
+    color: #8f8f8f;
+    color: #000000;
     color: var(--groupTitleColor, #8f8f8f);
     cursor: default;
+    font-size: 1em;
     font-size: var(--groupTitleFontSize, 12px);
+    font-weight: 500;
     font-weight: var(--groupTitleFontWeight, 600);
+    height: 32px;
     height: var(--height, 42px);
+    line-height: 32px;
     line-height: var(--height, 42px);
+    padding: 0 20px;
     padding: var(--groupTitlePadding, 0 20px);
     text-overflow: ellipsis;
     overflow-x: hidden;
     white-space: nowrap;
+    text-transform: uppercase;
     text-transform: var(--groupTitleTextTransform, uppercase);
   }
 

@@ -28,7 +28,7 @@
     line-height: var(--height, 42px);
     padding: 0 20px;
     padding: var(--itemPadding, 0 20px);
-    color: #000000;
+    color: #5f5f5f;
     color: var(--itemColor, #000000);
     text-overflow: ellipsis;
     overflow: hidden;

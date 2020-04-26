@@ -641,7 +641,7 @@
     color: var(--inputColor, #3f4f5f);
     height: 32px;
     height: var(--height, 42px);
-    line-height: 42px;
+    line-height: 32px;
     line-height: var(--height, 42px);
     padding: 0 16px;
     padding: var(--inputPadding, var(--padding));
@@ -693,7 +693,7 @@
     overflow-x: hidden;
     padding: 0 20px 0 0;
     padding: var(--selectedItemPadding, 0 20px 0 0);
-    font-size: 12px;
+    font-size: 1.1em;
     font-size: var(--selectedItemFontSize, 12px);
     font-weight: 600;
     font-weight: var(--selectedItemFontweight, 600);
@@ -725,7 +725,7 @@
     position: absolute;
     right: 10px;
     right: var(--indicatorRight, 10px);
-    top: 11px;
+    top: 5px;
     top: var(--indicatorTop, 11px);
     width: 20px;
     width: var(--indicatorWidth, 20px);
