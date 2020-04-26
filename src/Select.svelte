@@ -626,6 +626,7 @@
     display: flex;
     align-items: center;
     padding: var(--padding);
+    background: #fff;
     background: var(--background, #fff);
   }
 
@@ -849,8 +850,8 @@
   {#if showChevron && !selectedValue || (!isSearchable && !isDisabled && !isWaiting && ((showSelectedItem && !isClearable) || !showSelectedItem))}
     <div class="indicator">
       <svg        
-        width="20px"
-        height="20px"
+        width="100%"
+        height="100%"
         viewBox="0 0 20 20"
         focusable="false"
         class="css-19bqh2r">
