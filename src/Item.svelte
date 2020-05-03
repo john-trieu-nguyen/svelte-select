@@ -38,6 +38,7 @@
   .groupHeader {
     text-transform: uppercase;
     text-transform: var(--groupTitleTextTransform, uppercase);
+    background-color: #e6e6e6;
   }
 
   .groupItem {
